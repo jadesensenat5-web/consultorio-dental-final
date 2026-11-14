@@ -1,0 +1,37 @@
+<div class="titulo">
+  <h2>Citas</h2>
+  <a class="boton" routerLink="/citas/nueva">+ Nueva cita</a>
+</div>
+
+<div class="tabla-contenedor">
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Paciente</th>
+        <th>Dentista</th>
+        <th>Servicio</th>
+        <th>Estado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (c of citas; track c.id) {
+        <tr>
+          <td>{{ c.fecha }}</td>
+          <td>{{ c.hora }}</td>
+          <td>{{ paciente(c.pacienteId) }}</td>
+          <td>{{ dentista(c.dentistaId) }}</td>
+          <td>{{ servicio(c.servicioId) }}</td>
+          <td>
+            <span class="etiqueta" [class]="'etiqueta ' + claseEstado(c.estado)">{{ c.estado }}</span>
+          </td>
+          <td>
+            <a class="boton" [routerLink]="['/citas', c.id]">Ver detalle</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,66 @@
+<a class="volver" routerLink="/citas">← Volver a citas</a>
+<h2>Registrar cita</h2>
+
+<form class="formulario" [formGroup]="form" (ngSubmit)="guardar()">
+  <div class="campo">
+    <label>Paciente</label>
+    <select formControlName="pacienteId" [class.error]="invalido('pacienteId')">
+      <option value="">Selecciona un paciente</option>
+      @for (p of pacientes; track p.id) {
+        <option [value]="p.id">{{ p.nombre }}</option>
+      }
+    </select>
+    @if (invalido('pacienteId')) { <small>Debes seleccionar un paciente.</small> }
+  </div>
+
+  <div class="campo">
+    <label>Dentista</label>
+    <select formControlName="dentistaId" [class.error]="invalido('dentistaId')">
+      <option value="">Selecciona un dentista</option>
+      @for (d of dentistas; track d.id) {
+        <option [value]="d.id">{{ d.nombre }}</option>
+      }
+    </select>
+    @if (invalido('dentistaId')) { <small>Debes seleccionar un dentista.</small> }
+  </div>
+
+  <div class="campo">
+    <label>Servicio</label>
+    <select formControlName="servicioId" [class.error]="invalido('servicioId')">
+      <option value="">Selecciona un servicio</option>
+      @for (s of servicios; track s.id) {
+        <option [value]="s.id">{{ s.nombre }}</option>
+      }
+    </select>
+    @if (invalido('servicioId')) { <small>Debes seleccionar un servicio.</small> }
+  </div>
+
+  <div class="fila">
+    <div class="campo">
+      <label>Fecha</label>
+      <input type="date" formControlName="fecha" [class.error]="invalido('fecha')" />
+      @if (invalido('fecha')) { <small>La fecha es obligatoria.</small> }
+    </div>
+
+    <div class="campo">
+      <label>Hora</label>
+      <input type="time" formControlName="hora" [class.error]="invalido('hora')" />
+      @if (invalido('hora')) { <small>La hora es obligatoria.</small> }
+    </div>
+  </div>
+
+  <div class="campo">
+    <label>Estado</label>
+    <select formControlName="estado">
+      @for (e of estados; track e) {
+        <option [value]="e">{{ e }}</option>
+      }
+    </select>
+  </div>
+
+  <button type="submit" class="guardar">Guardar cita</button>
+
+  @if (guardada) {
+    <p class="exito">✅ ¡Cita registrada! Volviendo a la lista...</p>
+  }
+</form>

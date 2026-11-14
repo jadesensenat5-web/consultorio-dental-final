@@ -1,0 +1,12 @@
+<h2>Dentistas</h2>
+
+<div class="tarjetas">
+  @for (d of dentistas; track d.id) {
+    <div class="tarjeta">
+      <div class="avatar">🦷</div>
+      <h3>{{ d.nombre }}</h3>
+      <p class="especialidad">{{ d.especialidad }}</p>
+      <p class="horario">🕒 {{ d.horario }}</p>
+    </div>
+  }
+</div>

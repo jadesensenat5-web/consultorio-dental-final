@@ -1,0 +1,96 @@
+H2 {
+  margin-bottom: 16px;
+}
+h3 {
+  margin: 28px 0 12px;
+}
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+.dato {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+}
+.numero {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.azul {
+  border-color: #0d6efd;
+}
+.azul .numero {
+  color: #0d6efd;
+}
+.verde {
+  border-color: #198754;
+}
+.verde .numero {
+  color: #198754;
+}
+.naranja {
+  border-color: #fd7e14;
+}
+.naranja .numero {
+  color: #fd7e14;
+}
+.gris {
+  border-color: #6c757d;
+}
+.gris .numero {
+  color: #6c757d;
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.fila p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+.etiqueta {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+}
+.vigente {
+  background: #198754;
+}
+.proceso {
+  background: #fd7e14;
+}
+.finalizada {
+  background: #6c757d;
+}
+.boton {
+  background: #0d6efd;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.boton:hover {
+  background: #0b5ed7;
+}

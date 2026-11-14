@@ -1,0 +1,47 @@
+<h2>Panel principal</h2>
+
+<div class="resumen">
+  <div class="dato azul">
+    <span class="numero">{{ totalCitas }}</span>
+    <span>Citas totales</span>
+  </div>
+  <div class="dato verde">
+    <span class="numero">{{ vigentes }}</span>
+    <span>Vigentes</span>
+  </div>
+  <div class="dato naranja">
+    <span class="numero">{{ enProceso }}</span>
+    <span>En proceso</span>
+  </div>
+  <div class="dato gris">
+    <span class="numero">{{ finalizadas }}</span>
+    <span>Finalizadas</span>
+  </div>
+  <div class="dato azul">
+    <span class="numero">{{ totalPacientes }}</span>
+    <span>Pacientes</span>
+  </div>
+  <div class="dato azul">
+    <span class="numero">{{ totalDentistas }}</span>
+    <span>Dentistas</span>
+  </div>
+</div>
+
+<h3>Citas pendientes</h3>
+
+<div class="lista">
+  @for (c of proximas; track c.id) {
+    <div class="fila">
+      <div>
+        <strong>{{ paciente(c.pacienteId) }}</strong>
+        <p>{{ dentista(c.dentistaId) }}</p>
+      </div>
+      <div class="fecha">
+        <p>{{ c.fecha }}</p>
+        <p>{{ c.hora }}</p>
+      </div>
+      <span [class]="'etiqueta ' + claseEstado(c.estado)">{{ c.estado }}</span>
+      <a class="boton" [routerLink]="['/citas', c.id]">Ver detalle</a>
+    </div>
+  }
+</div>

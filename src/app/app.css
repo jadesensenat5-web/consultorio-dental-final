@@ -1,0 +1,35 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 24px;
+  background: #0d59fd;
+}
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+.links a:hover,
+.links a.activo {
+  background: rgba(255, 255, 255, 0.25);
+}
+.contenido {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}

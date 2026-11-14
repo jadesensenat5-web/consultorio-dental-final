@@ -1,0 +1,62 @@
+H2 {
+  margin-bottom: 16px;
+}
+.tabla-contenedor {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+}
+th {
+  background: #0d6efd;
+  color: #fff;
+}
+tr:hover td {
+  background: #f3f8ff;
+}
+.etiqueta {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+}
+.vigente {
+  background: #198754;
+}
+.proceso {
+  background: #fd7e14;
+}
+.finalizada {
+  background: #6c757d;
+}
+.boton {
+  background: #0d6efd;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.boton:hover {
+  background: #0b5ed7;
+}
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.titulo h2 {
+  margin: 0;
+}
